@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-uf-_#x$3%+(#*o#@g$1-j72)*a5zgns3ac6f#_kfd22yy5nfjh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 import os
-ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = ['.onrender.com', '*']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Application definition
