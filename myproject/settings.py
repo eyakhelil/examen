@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'api',
     'graphene_django',
+    'django_celery_beat',
+
 ]
 
 MIDDLEWARE = [
@@ -133,3 +135,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 GRAPHENE = {
     "SCHEMA": "api.schema.schema"
 }
+
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
